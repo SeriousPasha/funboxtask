@@ -1,0 +1,14 @@
+{
+  "name": "map-path-selection",
+  "description": "Path selection application",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "bootstrap": "3.3.x",
+    "jquery": "2.2.x",
+    "underscore" : "1.8.3",
+    "ng-sortable": "1.3.7"
+  }
+}

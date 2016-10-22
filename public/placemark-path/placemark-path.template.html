@@ -1,0 +1,27 @@
+
+
+<div class="path-selection-box">
+
+    <div class="path-selection-placemarks">
+        <form class="add-placemark" ng-submit="$ctrl.newPlacemarkSubmit()">
+            <input ng-model="$ctrl.newPlacemark"
+                   class="placemark-input"
+                   placeholder="Название точки маршрута"
+                   name="placemark"
+                   type="text" />
+        </form>
+        <ul class="placemark-list" data-as-sortable="$ctrl.dragControlListeners" data-ng-model="$ctrl.placemarks">
+            <li ng-repeat="placemark in $ctrl.placemarks" data-as-sortable-item>
+                <div class="placemark" data-as-sortable-item-handle>
+                    <div class="placemark-text">{{placemark.value}}</div>
+                    <div class="placemark-delete" ng-click="$ctrl.deletePlacemark($index)">✕</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <ya-map placemarks="$ctrl.placemarks"
+            mapOptions="{center : [55.76, 37.64], zoom : 12}"
+            zoomOptions="{float: 'none',position: {right: 40,top: 5}}"></ya-map>
+
+</div>

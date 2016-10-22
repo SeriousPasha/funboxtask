@@ -1,0 +1,152 @@
+/* css reset */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, p, blockquote, table, th, td, embed, object {
+    padding: 0;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img, abbr {
+    border: 0;
+}
+address, caption, cite, code, dfn, em,
+h1, h2, h3, h4, h5, h6, strong, th, var {
+    font-weight: normal;
+    font-style: normal;
+}
+ul {
+    list-style: none;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.0em;
+}
+q:before, q:after {
+    content: '';
+}
+a, ins {
+    text-decoration: none;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Verdana, Trebuchet;
+}
+
+/* END css reset */
+
+body, html {
+    width : 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+.path-selection-box {
+    position: relative;
+    width : 100%;
+    max-width : 900px;
+    height : 300px;
+    max-height : 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.path-selection-placemarks {
+    position: relative;
+    float : left;
+    padding-left: 2%;
+    padding-right: 2%;
+    width : 30%;
+    height : 300px;
+}
+
+.path-selection-placemarks .placemark-input {
+    width: 100%;
+    font-size : 17px;
+    height : 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.map-box {
+    position: relative;
+    float : left;
+    padding-left: 2%;
+    padding-right: 2%;
+    width : 62%;
+    height : 300px;
+}
+
+.placemark-list {
+    overflow: auto;
+    height : 270px;
+}
+
+.placemark-list .placemark {
+    outline: none;
+    text-align: left;
+    width: 90%;
+    display: block;
+    border: 0;
+    margin: 0;
+    background: none;
+    position: relative;
+    font-size: 17px;
+    padding: 10px 20px 10px 20px;
+    height: 37px;
+    cursor: move;
+    box-sizing: border-box;
+}
+
+.placemark-list .placemark-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    width: 100%;
+}
+
+.placemark-list .placemark-delete {
+    margin-left: -15px;
+    margin-right: -12px;
+    float: right;
+    display: block;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.placemark-list .dragging-placemark {
+    background: #ddddff;
+}
+
+.placemark-list .dragging-placemark:after {
+    position: absolute;
+    top : 7px;
+    left : 6px;
+    color : #3333dd;
+    font-size: 18px;
+    content: '↕';
+}
+
+.placemark-list .dragging-placemark:first-child:after {
+    content: '↓';
+}
+.placemark-list .dragging-placemark:last-child:after {
+    content: '↑';
+}
+.placemark-list .dragging-placemark:first-child:last-child:after {
+    content: '';
+}
+
+.body-mock {
+    width: 100%;
+    min-height: 100%;
+    position: relative
+}
